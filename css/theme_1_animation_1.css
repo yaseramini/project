@@ -1,0 +1,502 @@
+/* Animated CSS3 Mega Menu (Theme 1) - Animation 1 */
+body{
+	margin:0;
+	}	
+/* ========== THE MAIN FONT ========== */
+@font-face{
+	font-family:"BebasNeue";
+	src:url('../font/BebasNeue.eot');
+	src:url('../font/BebasNeue.eot?#iefix') format('embedded-opentype'),
+		url('../font/BebasNeue.woff') format('woff'),
+		url('../font/BebasNeue.ttf') format('truetype'),
+		url('../font/BebasNeue.svg#BebasNeue') format('svg');
+	}
+/* ========== MAIN DIV THAT HOLDS THE ENTIRE MENU ========== */
+.menu{
+	width:980px;
+	height:42px;
+	margin:120px auto 0;
+	background:#333;
+	border-top:solid 2px #454545;
+	border-bottom:solid 2px #2A2A2A;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+	-webkit-box-shadow:0 1px 5px #828282;
+	-moz-box-shadow:0 1px 5px #828282;
+	box-shadow:0 1px 5px #828282;
+	}
+.menu ul, .menu ol{
+	margin:0;
+	padding:0;
+	list-style:none;
+	}
+/* ========== FLOAT ========== */
+.menu .left{
+	float:left;
+	}
+.menu .right{
+	float:right;
+	}	
+/* ========== DIV THAT HOLDS MAIN LINKS ========== */
+.menu ul{
+	position:relative;
+	}
+/* ========== MAIN LINKS ========== */
+.menu ul li{
+	float:left;
+	}
+.menu ul li.menu_right{
+	position:relative;
+	}
+.menu > ul > li:first-child a{
+	-webkit-border-top-left-radius:3px;
+	-webkit-border-bottom-left-radius:3px;
+	-moz-border-radius:3px 0 0 3px;
+	border-radius:3px 0 0 3px;
+	}
+.menu ul > li > a{
+	display:block;
+	height:42px;
+	padding:0 13px;
+	font:20px/44px "BebasNeue";
+	color:#FFF;
+	text-decoration:none;
+	text-transform:uppercase;
+	border-right:solid 1px #2A2A2A;
+	-webkit-transition:color 180ms linear 20ms, background 180ms linear 20ms;
+	-moz-transition:color 180ms linear 20ms, background 180ms linear 20ms;
+	-ms-transition:color 180ms linear 20ms, background 180ms linear 20ms;
+	-o-transition:color 180ms linear 20ms, background 180ms linear 20ms;
+	transition:color 180ms linear 20ms, background 180ms linear 20ms;
+	}
+/* ========== MAIN LINKS ON MOUSEOVER ========== */
+.menu ul:hover li.active a{
+	color:#FFF;
+	background:#333;
+	}
+.menu ul li.active a, .menu ul li:hover > a, .menu ul li.active:hover > a{
+	color:#64C1FF;
+	background:#282828;
+	}
+/* ========== MAIN LINKS ON MOUSE CLICK ========== */	
+.menu ul li a:active, .menu ul li.active a:active{
+	color:#888;
+	}
+/* ========== CLASSIC/MEGA MENU ========== */	
+.menu ul ul, .menu .mega_menu{
+	position:absolute;
+	visibility:hidden;
+	opacity:0;
+	z-index:11;
+	padding-bottom:1px;
+	background:#2A2A2A;
+	border-left:solid 1px #232323;
+	border-right:solid 1px #232323;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+	-webkit-box-shadow:0 0 2px #2A2A2A;
+	-moz-box-shadow:0 0 2px #2A2A2A;
+	box-shadow:0 0 2px #2A2A2A;
+	-webkit-transition:all 150ms linear 20ms;
+	-moz-transition:all 150ms linear 20ms;
+	-ms-transition:all 150ms linear 20ms;
+	-o-transition:all 150ms linear 20ms;
+	transition:all 150ms linear 20ms;
+	}
+/* ========== MEGA MENU ========== */		
+.menu .mega_menu{
+	padding:9px 10px 2px;
+	border:none;
+	border-top:solid 1px #232323;
+	border-bottom:solid 1px #232323;
+	}
+/* ========== CLASSIC/MEGA MENU ON MOUSEOVER ========== */
+.menu ul li:hover > ul, .menu ul li:hover .mega_menu{
+	visibility:visible;
+	opacity:1;
+	}
+/* ========== LINKS IN CLASSIC MENU ========== */	
+.menu ul ul li{
+	float:none;
+	position:relative;
+	}
+.menu ul ul li a{
+	position:relative;
+	width:132px;
+	height:30px;
+	padding-right:0;
+	font-size:17px;
+	color:#444;
+	line-height:32px;
+	border-top:solid 1px #232323;
+	border-right:none;
+	}
+.menu ul ul li a i{
+	position:absolute;
+	top:3px;
+	right:12px;
+	font:18px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	}
+/* ========== LINKS ON MOUSEOVER IN CLASSIC MENU ========== */
+.menu ul ul li:hover > a{
+	background:#373737;
+	color:#64C1FF;
+	}
+/* ========== LINKS ON MOUSE CLICK IN CLASSIC MENU ========== */
+.menu ul ul li a:active{
+	color:#777;
+	}
+/* ========== CLASSIC MENU LVL 2,3,4,... ========== */	
+.menu ul ul ul{
+	left:100%;
+	top:0;
+	-webkit-border-radius:3px;
+	-webkit-border-top-left-radius:0;
+	-moz-border-radius:0 3px 3px 3px;
+	border-radius:0 3px 3px 3px;
+	}	
+/* ========== MEGA MENU ALIGNED TO THE RIGHT SIDE ========== */	
+.menu ul li.menu_right .mega_menu{
+	right:0;
+	}	
+/* ========== DIFFERENT SIZE OF MEGA MENU ========== */
+.menu .size1{
+	width:150px; /* + 10px from left and right side, width=170px */
+	}
+.menu .size2{
+	width:250px; /* + 10px from left and right side, width=270px */
+	}	
+.menu .size3{
+	width:350px; /* + 10px from left and right side, width=370px */
+	}
+.menu .size4{
+	width:450px; /* + 10px from left and right side, width=470px */
+	}
+.menu .size5{
+	width:550px; /* + 10px from left and right side, width=570px */
+	}
+.menu .size6{
+	width:650px; /* + 10px from left and right side, width=670px */
+	}
+.menu .size7{
+	width:750px; /* + 10px from left and right side, width=770px */
+	}
+.menu .size8{
+	width:850px; /* + 10px from left and right side, width=870px */
+	}
+.menu .full_width{
+	width:960px; /* + 10px from left and right side, width=980px. 980px is the width of the Menu */
+	left:0;
+	padding:9px 10px 2px;
+	}	
+/* ========== HEADINGS IN MEGA MENU ========== */
+.menu h1, .menu h2, .menu h3, .menu h4, .menu h5, .menu h6{
+	margin:0;
+	font-family:"BebasNeue";
+	font-weight:normal;
+	color:#64C1FF;
+	}
+.menu h1{
+	font-size:24px;
+	}
+.menu h2{
+	font-size:20px;
+	}
+.menu h3{
+	font-size:18px;
+	}
+.menu h4{
+	font-size:16px;
+	}
+.menu h5{
+	font-size:14px;
+	}
+.menu h6{
+	font-size:12px;
+	}
+/* ========== CLASSIC LINKS IN MEGA MENU ========== */
+.menu .mega_menu a{
+	display:inline;
+	padding:0;
+	font-family:inherit;
+	font-size:inherit;
+	color:#999;
+	line-height:inherit;
+	text-transform:none;
+	text-decoration:underline;
+	border:none;
+	-webkit-transition:color 160ms linear 20ms;
+	-moz-transition:color 160ms linear 20ms;
+	-ms-transition:color 160ms linear 20ms;
+	-o-transition:color 160ms linear 20ms;
+	transition:color 160ms linear 20ms;
+	}
+.menu .mega_menu a:hover{
+	color:#64C1FF;
+	}
+/* ========== IMAGES INSIDE LINK IN MEGA MENU ========== */		
+.menu .mega_menu a img{
+	margin:0;
+	opacity:0.7;
+	-webkit-transition:opacity 160ms ease-in 10ms;
+	-moz-transition:opacity 160ms ease-in 10ms;
+	-ms-transition:opacity 160ms ease-in 10ms;
+	-o-transition:opacity 160ms ease-in 10ms;
+	transition:opacity 160ms ease-in 10ms;
+	}
+.menu .mega_menu a img:hover{
+	opacity:1;
+	}
+.menu .mega_menu a img:active{
+	opacity:0.8;
+	}	
+/* ========== TYPOGRAPHY IN MEGA MENU ========== */	
+.menu .mega_menu p{
+	margin:3px 0 6px 0;
+	font-size:12px;
+	color:#787878;
+	font-family:Tahoma, Geneva, sans-serif;
+	}
+.menu .mega_menu .one, .menu .mega_menu .one_half, .menu .mega_menu .one_thirds, .menu .mega_menu .two_thirds, .menu .mega_menu .one_fourth,.menu .mega_menu .three_fourths{
+	margin:0 1%;
+	padding:0 0 12px;
+	float:left;
+	}	
+.menu .mega_menu .one{
+	width:98%;
+	}	
+.menu .mega_menu .one_half{
+	width:48%;
+	}
+.menu .mega_menu .one_thirds{
+	width:31.33%;
+	}	
+.menu .mega_menu .two_thirds{
+	width:64.67%;
+	}
+.menu .mega_menu .one_fourth{
+	width:23%;
+	}	
+.menu .mega_menu .three_fourths{
+	width:73%;
+	}		
+/* ========== IMAGES IN MEGA MENU ========== */		
+.menu .mega_menu img{
+	border:solid 1px #111;
+	-webkit-box-shadow:0 0 3px #222;
+	-moz-box-shadow:0 0 3px #222;
+	box-shadow:0 0 3px #222;
+	}
+.menu .mega_menu img.left{
+	margin:3px 7px 4px 0;
+	}
+.menu .mega_menu img.right{
+	margin:3px 0 4px 7px;
+	}
+/* ========== PORTFOLIO IN MEGA MENU ========== */	
+.menu .mega_menu .portfolio li{
+	display:inline-block;
+	vertical-align:top;
+	width:232px;
+	margin:2px 7px 10px;
+	float:none;
+	*float:left;
+	}	
+.menu .mega_menu .portfolio li a{
+	display:block;
+	height:auto;
+	}
+.menu .mega_menu .portfolio li a img{
+	width:100%;
+	height:105px;
+	margin:0;
+	float:left;
+	opacity:0.75;
+	border:solid 1px #111;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	-webkit-box-shadow:0 0 3px #222;
+	-moz-box-shadow:0 0 3px #222;
+	box-shadow:0 0 3px #222;
+	-webkit-transition:opacity 140ms ease-in 10ms;
+	-moz-transition:opacity 140ms ease-in 10ms;
+	-ms-transition:opacity 140ms ease-in 10ms;
+	-o-transition:opacity 140ms ease-in 10ms;
+	transition:opacity 140ms ease-in 10ms;
+	}	
+.menu .mega_menu .portfolio li p{
+	margin:2px 5px 0;
+	font:11px/11px Tahoma, Geneva, sans-serif;
+	text-align:left;
+	color:#666;
+	float:left;
+	}
+.menu .mega_menu .portfolio li a:hover img{
+	opacity:1;
+	}
+.menu .mega_menu .portfolio li a:active img{
+	opacity:0.85;
+	}		
+/* ========== LISTS IN MEGA MENU ========== */
+.menu .mega_menu .list{
+	display:inline-block;
+	vertical-align:top;
+	width:140px;
+	margin:0 8px 7px;
+	padding:0;
+	*float:left;
+	}	
+.menu .mega_menu .list li{
+	width:100%;
+	float:left;
+	}	
+.menu .mega_menu .list li.headline{
+	border-bottom:solid 1px #353535;
+	}
+.menu .mega_menu .list li.headline h3, .menu .mega_menu .list li.headline h3 a{
+	margin-left:7px;
+	font:20px "BebasNeue";
+	color:#5B5B5B;
+	text-transform:uppercase;
+	}
+.menu .mega_menu .list li.headline h3 a{
+	margin-left:0;
+	}
+.menu .mega_menu .list li a{
+	margin-left:7px;
+	padding:0;
+	font:13px/24px Tahoma, Geneva, sans-serif;
+	color:#616161;
+	text-transform:none;
+	text-decoration:none;
+	border:none;
+	}
+.menu .mega_menu .list li:hover a{
+	background:none;
+	}
+.menu .mega_menu .list li a:hover, .menu .mega_menu .list li.headline h3 a:hover{
+	color:#64C1FF;
+	}
+.menu .mega_menu .list li a:active, .menu .mega_menu .list li.headline h3 a:active{
+	color:#888;
+	}
+/* ========== BLOG IN MEGA MENU ========== */
+.menu .mega_menu .blog_post{
+	margin-bottom:10px;
+	padding:5px;
+	overflow:hidden;
+	background:#3B3B3B;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	} 	
+.menu .mega_menu .blog_post h2{
+	margin-bottom:4px;
+	color:#252525;
+	border-bottom:solid 1px #2E2E2E;
+	}	
+.menu .mega_menu .blog_post p{
+	font-size:11px;
+	color:#666;
+	}
+.menu .mega_menu .blog_post .read_more{
+	margin-top:-4px;
+	height:auto;
+	float:right;
+	font:11px Tahoma, Geneva, sans-serif;
+	color:#666;
+	text-decoration:none;
+	}	
+.menu .mega_menu .blog_post .read_more:hover{
+	color:#64C1FF;
+	}
+/* ========== GOOGLE MAP ========== */
+.menu .mega_menu .map{
+	width:550px;
+	height:160px;
+	-webkit-box-shadow:0 2px 4px #111;
+	-moz-box-shadow:0 2px 4px #111;
+	box-shadow:0 2px 4px #111;
+	}
+/* ========== CONTACT FORM IN MEGA MENU ========== */
+.menu .mega_menu #contact{
+	width:490px;
+	margin:12px auto 12px;
+	}	
+.menu .mega_menu .contact{
+	width:auto;
+	margin:0;
+	}
+.menu .mega_menu .contact li{
+	width:auto;
+	margin:3px 0;
+	float:left;
+	}
+.menu .mega_menu  .contact li:first-child{
+	margin-right:10px;
+	}
+/* ========== FIELDS IN CONTACT FORM ========== */	
+.menu .mega_menu  .contact input, .menu .mega_menu  .contact textarea{
+	font:14px Tahoma, Geneva, sans-serif;
+	color:#888;
+	background:#333;
+	border:solid 1px #232323;
+	-webkit-box-shadow:0 0 3px #232323;
+	-moz-box-shadow:0 0 3px #232323;
+	box-shadow:0 0 3px #232323;
+	-webkit-transition:all 100ms linear;
+	-moz-transition:all 100ms linear;
+	-ms-transition:all 100ms linear;
+	-o-transition:all 100ms linear;
+	transition:all 100ms linear;
+	}
+.menu .mega_menu .contact input{
+	width:230px;
+	height:26px;
+	padding:0 4px;
+	float:left;
+	}
+.menu .mega_menu .contact textarea{
+	width:480px;
+	height:80px;
+	padding:4px;
+	float:left;
+	}
+/* ========== FIELDS IN CONTACT FORM ON MOUSEOVER ========== */	
+.menu .mega_menu .contact input:hover, .menu .mega_menu .contact textarea:hover{
+	border:solid 1px #444;
+	}
+/* ========== FIELDS IN CONTACT FORM ON MOUSE CLICK ========== */	
+.menu .mega_menu .contact input:focus, .menu .mega_menu .contact textarea:focus{
+	border:solid 1px #444;
+	color:#64C1FF;
+	}
+/* ========== BUTTON IN CONTACT FORM ========== */	
+.menu .mega_menu .contact #button{
+	width:48px;
+	height:26px;
+	font-size:13px;
+	color:#999;
+	background:#333;
+	cursor:pointer;
+	border:solid 1px #232323;
+	-webkit-box-shadow:0 0 2px #232323;
+	-moz-box-shadow:0 0 2px #232323;
+	box-shadow:0 0 2px #232323;
+	}
+/* ========== BUTTON IN CONTACT FORM ON MOUSEOVER ========== */	
+.menu .mega_menu  .contact #button:hover{
+	border:solid 1px #444;
+	}
+/* ========== BUTTON IN CONTACT FORM ON MOUSE CLICK ========== */	
+.menu .mega_menu  .contact #button:active{
+	color:#444;
+	border:solid 1px #292929;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+	}
+/* LizardThemes/July2013 */
